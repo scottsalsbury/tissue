@@ -10,6 +10,7 @@ public class TissueApplication {
 	private static final Log logger = LogFactory.getLog(TissueApplication.class);
 
 	public static void main(String[] args) {
+		logger.info("Starting Boot application");
 		SpringApplication.run(TissueApplication.class, args);
 	}
 
