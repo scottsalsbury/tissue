@@ -37,7 +37,7 @@ public class TissueControllerTest {
 		when(db.readStory("1")).thenReturn(s);
 		mockMvc.perform(get("/story/1"))
 				.andExpect(status().is(200))
-				.andExpect(content().string("{\"id\":0,\"title\":\"mock\"}"));
+				.andExpect(content().string("{\"id\":null,\"title\":\"mock\",\"time\":null,\"location\":null}"));
 	}
 	@Test
 	public void testPost() throws Exception {
