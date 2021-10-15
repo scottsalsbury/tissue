@@ -3,8 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo Building tissue.'
+                sh './mvnw package'
             }
+        }
+    }
+    post {
+        always {
+            junit 'target/surefire-reports/**/*.xml'
         }
     }
 }
